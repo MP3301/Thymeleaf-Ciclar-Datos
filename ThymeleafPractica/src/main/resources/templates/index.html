@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Inicio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>INICIO</div>
+        <p th:text="${mensaje}"></p>
+        
+        Nombre: <span th:text="${persona1.nombre}">Mostrar nombre</span>
+        <br/>
+       Apellido: <span th:text="${persona1.apellido}">Mostrar apellido</span>
+       </br>
+       Email: <span th:text="${persona1.email}">Mostrar email</span>
+       <br/>
+       Telefono: <span th:text="${persona1.telefono}">Mostrar telefono</span>
+       </br>
+       
+       
+       <table>
+           <tr>
+           <<th>Nombre:</th>
+           <<th>Apellido:</th>
+           <<th>Email:</th>
+           <<th>Telefono:</th>
+           </tr>
+           <tr th:each="persona : ${personas}">
+               
+             <td th:text="${persona.nombre}">Mostrar nombre</td>
+             <td th:text="${persona.apellido}">Mostrar apellido</td>
+             <td th:text="${persona.email}">Mostrar email</td>
+             <td th:text="${persona.telefono}">Mostrar telefono</td>
+       </br>
+           </tr>
+       </table>
+    </body>
+</html>
